@@ -132,6 +132,12 @@ eeprom.dat
 spi_flash.bin
 fs.img
 
+# Ignore everything in the config directory
+config/*
+
+# Except for the config/examples/Simulator directory
+!config/examples/Simulator/
+
 # CMake
 buildroot/share/cmake/*
 CMakeLists.txt

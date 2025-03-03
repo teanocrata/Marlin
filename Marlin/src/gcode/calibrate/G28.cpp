@@ -586,4 +586,6 @@ void GcodeSuite::G28() {
     gcode.process_subcommands_now(F(EVENT_GCODE_AFTER_HOMING));
   #endif
 
+  set_bed_leveling_enabled(true);
+
 }

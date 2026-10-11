@@ -2537,6 +2537,11 @@
  *   M502 - Revert settings to "factory" defaults. (Follow with M500 to init the EEPROM.)
  */
 #define EEPROM_SETTINGS       // Persistent storage with M500 and M501
+// Store settings in MCU flash (last 4K) instead of the onboard I2C EEPROM of the
+// MKS Robin E3 V1.1: on this board its reads fail intermittently ("EEPROM Corrupt",
+// "datasize error") even with the #28581 bus-recovery fix. Firmware is ~192K, far
+// below the EEPROM pages at the end of the 256K flash.
+#define FLASH_EEPROM_EMULATION
 //#define DISABLE_M503        // Saves ~2700 bytes of flash. Disable for release!
 #define EEPROM_CHITCHAT       // Give feedback on EEPROM commands. Disable to save flash.
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load

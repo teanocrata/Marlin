@@ -2066,7 +2066,7 @@
  *
  * Warning: Does not respect endstops!
  */
-//#define BABYSTEPPING
+#define BABYSTEPPING  // ajuste fino de Z en marcha (M290 / pantalla)
 #if ENABLED(BABYSTEPPING)
   //#define INTEGRATED_BABYSTEPPING         // EXPERIMENTAL integration of babystepping into the Stepper ISR
   //#define BABYSTEP_WITHOUT_HOMING
@@ -2451,7 +2451,7 @@
  * Currently handles M108, M112, M410, M876
  * NOTE: Not yet implemented for all platforms.
  */
-//#define EMERGENCY_PARSER
+#define EMERGENCY_PARSER  // M112/M108/M410 al momento, aunque la cola esté llena
 
 /**
  * Realtime Reporting (requires EMERGENCY_PARSER)
